@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="blackjack.FXMLDocumentController">
+   <center>
+      <VBox alignment="CENTER" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefWidth="600.0">
+               <children>
+                  <VBox alignment="CENTER">
+                     <children>
+                        <Label text="Karty gracza">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label id="punktyGracza" fx:id="punktyGracza" text="Punkty: 0" />
+                        <TextArea id="kartyGracza" fx:id="kartyGracza" editable="false" focusTraversable="false" minHeight="-Infinity" minWidth="-Infinity" prefHeight="222.0" prefRowCount="12" prefWidth="111.0">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin></TextArea>
+                     </children>
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <VBox alignment="CENTER">
+                     <children>
+                        <Label text="Karty krupiera">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label id="punktyKrupiera" fx:id="punktyKrupiera" text="Punkty: 0" />
+                        <TextArea id="kartyKrupiera" fx:id="kartyKrupiera" editable="false" focusTraversable="false" prefHeight="222.0" prefRowCount="12" prefWidth="111.0">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </TextArea>
+                     </children>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER">
+               <children>
+                  <Label id="labelInfo" fx:id="labelInfo" alignment="CENTER" contentDisplay="CENTER" style="-fx-alignment: center; -fx-text-alignment: center;" text="Gramy!" textAlignment="CENTER">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="15.0" top="15.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" prefWidth="200.0">
+               <children>
+                  <Button id="btnStart" fx:id="btnStart" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#startGry" prefWidth="100.0" text="Nowa gra">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button id="btnDobierz" fx:id="btnDobierz" disable="true" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#dobieraGracz" prefWidth="100.0" text="Dobierz">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button id="btnStop" fx:id="btnStop" disable="true" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#dobieraKrupier" prefWidth="100.0" text="Przestań">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="30.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </VBox>
+   </center>
+</BorderPane>
